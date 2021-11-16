@@ -1,0 +1,41 @@
+header.header
+	.header__wrapper._lp
+		.header__container._container
+			.header__body
+				a.header__logo <span>Logo</span> Designs<span>.</span>
+
+				.header__menu
+					nav.menu.menu__body
+						ul.menu__list(data-spollers='768,max')
+							li.menu__item._active
+								a.menu__link(href='#online') Главная
+							li.menu__item
+								a.menu__link(href='#support') Проекты
+							li.menu__item.munu__item--with-sub-list._active
+								a.menu__link(href='#tarifs') Разработка сайтов
+								button(data-spoller type="button").menu__arrow
+									+svg-icon.svg-icon(svg-icon-name="arrow-down").menu__arrow_ico
+								ul.menu__sub-list
+									li.menu__sub-item
+										a.menu__sub-link(href="#start") Интернет-магазин
+									li.menu__sub-item
+										a.menu__sub-link(href="#standard") Интернет-каталог
+									li.menu__sub-item
+										a.menu__sub-link(href="#consultant") Корпоративный сайт
+									li.menu__sub-item
+										a.menu__sub-link(href="#premium") Landing page
+									li.menu__sub-item
+										a.menu__sub-link(href="#international") Сайт-визитка
+									li.menu__sub-item
+										a.menu__sub-link(href="#international") Веб-сервис
+							li.menu__item
+								a.menu__link(href='#begin') Услуги
+							li.menu__item
+								a.menu__link(href='#begin') Цены
+							li.menu__item
+								a.menu__link(href='#leader') Контакты
+				button.icon-menu(type='button')
+							span
+							span
+							span
+			button.button hello
