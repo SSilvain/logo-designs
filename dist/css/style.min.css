@@ -545,4 +545,13 @@ body._lock {
     bottom: calc(50% - 1px);
   }
 }
+
+.pixelperfect {
+  background: #000;
+  width: 1000px;
+  height: 3000px;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+}
 /*# sourceMappingURL=../maps/style.min.css.map */

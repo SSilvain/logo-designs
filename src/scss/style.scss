@@ -70,7 +70,17 @@ body {
 //@import "pagging";
 @import "basic-elements";
 @import "popup";
-@import "1_header";
+@import "_1_header.scss";
+
+.pixelperfect{
+	background: #000;
+	// background-image: url('../img/home.png');
+	width: 1000px;
+	height: 3000px;
+	position: absolute;
+	top: 0;
+	opacity: 1;
+}
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
