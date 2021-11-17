@@ -1,6 +1,6 @@
 header.header
 	.header__wrapper._lp
-		.header__container._container
+		.header__container._container._container--small
 			.header__body
 				a.header__logo <span>Logo</span> Designs<span>.</span>
 
@@ -11,7 +11,7 @@ header.header
 								a.menu__link(href='#online') Главная
 							li.menu__item
 								a.menu__link(href='#support') Проекты
-							li.menu__item.munu__item--with-sub-list._active
+							li.menu__item.munu__item--with-sub-list
 								a.menu__link(href='#tarifs') Разработка сайтов
 								button(data-spoller type="button").menu__arrow
 									+svg-icon.svg-icon(svg-icon-name="arrow-down").menu__arrow_ico
@@ -38,4 +38,4 @@ header.header
 							span
 							span
 							span
-			button.button hello
+			//- button.button hello

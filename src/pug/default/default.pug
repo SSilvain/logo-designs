@@ -5,8 +5,10 @@ html(lang='en')
 		block head
 			meta(charset='utf-8')
 			meta(name="viewport" content="width=device-width,initial-scale=1")
+			link(rel='stylesheet' href='css/0_style.css')
 			link(rel='stylesheet' href='css/components.css')
 			link(rel='stylesheet' href='css/1_header.css')
+			link(rel='stylesheet' href='css/2_top_block.css')
 			//- link(rel='stylesheet' href='css/style.min.css')
 	body
 		block content
@@ -15,10 +17,11 @@ html(lang='en')
 					main.page
 							//header
 							include ../partials/1_header
+							include ../partials/2_top-block
 				//- include ../partials/00_footer
 		block popup
 			include ../partials/popup.pug
 				script(src='js/libs_new/smooth-scroll.polyfills.min.js')
 				script(src='js/app.min.js')
-		#pixelperfect
-		button#pixelperfect__on ON
+		//- #pixelperfect
+		//- button#pixelperfect__on ON

@@ -1,3 +1,35 @@
+:root {
+	--colorBase: #6861ea;
+	--colorAlternate: #f7f7f7;
+	--colorAlternateDarkness: #d9e2ee;
+	--textColorBase: #444;
+	--textColorCaption: #000;
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-weight: 800;
+	font-style: normal;
+
+	src: url('../font/manrope-v8-latin_cyrillic-800.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	font-weight: normal;
+	font-style: normal;
+
+	src: url('../font/Gilroy-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	font-weight: 700;
+	font-style: normal;
+
+	src: url('../font/Gilroy-SemiBold.woff') format('woff');
+}
+
 .button {
 	display: flex;
 	flex-direction: row;
@@ -22,72 +54,40 @@
 	transition-duration: 0.9s;
 }
 
+.button:active {
+	border-radius: 25px;
+	border-radius: 9px;
+	box-shadow: inset 3px 3px 6px #001399, inset -3px -3px 6px #4e64d9;
+}
+
 @media (any-hover: hover) {
 	.button:hover {
 		background-position: 0 0, 0 0;
 	}
-
-	.button:active {
-		border-radius: 25px;
-		border-radius: 9px;
-		box-shadow: inset 3px 3px 6px #001399, inset -3px -3px 6px #4e64d9;
-	}
 }
 
 .caption {
-	color: #000;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 32px;
-	line-height: 44px;
+	display: flex;
 }
 
-@media (max-width: 1629px) {
-	.caption {
-		font-size: calc(24px + 8 * ((100vw - 320px) / 1309));
-	}
+.caption__box {
+	width: 600px;
 }
 
-@media (max-width: 1629px) {
-	.caption {
-		line-height: calc(30px + 14 * ((100vw - 320px) / 1309));
-	}
+.caption__meta {
+	font-size: 12px;
 }
 
-@media (max-width: 767.98px) {
-	.caption {
-		text-align: center;
-	}
+.caption__h2 {
+	font-size: 16px;
 }
 
-.text {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 23px;
+.caption__text {
+	font-size: 16px;
+	font-family: arial;
 }
-
-@media (max-width: 1629px) {
-	.text {
-		font-size: calc(12px + 2 * ((100vw - 320px) / 1309));
-	}
-}
-
-@media (max-width: 1629px) {
-	.text {
-		line-height: calc(18px + 5 * ((100vw - 320px) / 1309));
-	}
-}
-
-@media (max-width: 767.98px) {
-	.text {
-		text-align: center;
-	}
-}
-
 
 #pixelperfect {
-	/* background: #000; */
 	background-image: url('../img/home.png');
 	background-position: center 0;
 	width: 100%;
@@ -98,10 +98,12 @@
 	z-index: 999999;
 	pointer-events: none;
 }
+
 #pixelperfect.pixelperfect--disable {
 	opacity: 0;
 }
-#pixelperfect__on{
+
+#pixelperfect__on {
 	position: fixed;
 	top: 0;
 	left: 0;
