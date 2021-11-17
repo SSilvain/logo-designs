@@ -30,61 +30,84 @@
 	src: url('../font/Gilroy-SemiBold.woff') format('woff');
 }
 
-.button {
+.caption {
 	display: flex;
-	flex-direction: row;
+	font-family: 'Manrope', arial, sans-serif;
+}
+
+.caption__box {
+	width: 1200px;
+}
+
+.caption__meta {
+	position: relative;
+	font-size: 18.8px;
+	line-height: 25px;
+	font-weight: 800;
+	letter-spacing: 0.025em;
+	color: var(--textColorBase);
+	padding-left: 25px;
+	margin-bottom: 20px;
+}
+
+.caption__meta:before {
+	content:  "";
+	display: block;
+	position: absolute;
+	top:  12px;
+	left:  0;
+	width: 20px;
+	border-bottom:  2px solid var(--textColorBase);
+}
+
+.caption__h2 {
+	font-size: 100px;
+	line-height: 91px;
+	font-weight: 800;
+	letter-spacing: 0.025em;
+	color: var(--textColorCaption);
+	margin-bottom: 20px;
+}
+
+.caption__text {
+	font-family: Gilroy, arial, sans-serif;
+	font-size: 20px;
+	line-height: 25px;
+	font-weight: 400;
+	letter-spacing: 0.025em;
+	color: var(--colorBase);
+	width: 500px;
+	margin-bottom: 15px;
+}
+
+.button{
+	font-family: Manrope;
+	font-size: 18.8px;
+	line-height: 25px;
+	font-weight: 800;
+	letter-spacing: 0.025em;
+	background: var(--colorBase);
+	color: var(--colorAlternate);
+	width: 331px;
+	height: 90px;
+	border-radius: 40px;
+	text-transform: uppercase;
+	box-shadow: 2px 2px 2px #292d61, -2px -2px 6px #9faeff;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #f7f7f7;
-	border-radius: 15px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 18px;
-	color: var(--colorBase);
-	text-decoration: none;
-	padding: 20px 45px;
-	border-radius: 9px;
-	box-shadow: 3px 3px 6px #292d61, -3px -3px 6px #9faeff;
-	background-repeat: no-repeat;
-	background-position: -230px 0px, 0 0;
-	background-image: -webkit-linear-gradient(top left, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 37%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0) 50%);
-	background-size: 268% 250%, 100% 100%;
-	transition: background-position 0s ease;
-	transition-duration: 0.9s;
 }
 
 .button:active {
-	border-radius: 25px;
-	border-radius: 9px;
-	box-shadow: inset 3px 3px 6px #001399, inset -3px -3px 6px #4e64d9;
+	box-shadow: inset 1px 1px 3px #001399, inset -1px -1px 6px #4e64d9;
 }
 
 @media (any-hover: hover) {
 	.button:hover {
-		background-position: 0 0, 0 0;
+		opacity: .9;
 	}
-}
-
-.caption {
-	display: flex;
-}
-
-.caption__box {
-	width: 600px;
-}
-
-.caption__meta {
-	font-size: 12px;
-}
-
-.caption__h2 {
-	font-size: 16px;
-}
-
-.caption__text {
-	font-size: 16px;
-	font-family: arial;
 }
 
 #pixelperfect {

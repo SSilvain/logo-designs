@@ -1,4 +1,18 @@
-.top-block__caption{
+.top-block__caption {
   font-family: arial;
   position: relative;
 }
+
+.top-block__caption {}
+
+.top-block__caption .caption__box {}
+
+.top-block__caption .caption__meta {}
+
+.top-block__caption .caption__h2 {}
+
+.top-block__caption .caption__text {
+  margin-bottom: 50px;
+}
+
+.top-block__caption .top-block__button {}
