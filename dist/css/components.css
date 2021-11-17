@@ -86,7 +86,7 @@
 }
 
 
-.pixelperfect {
+#pixelperfect {
 	/* background: #000; */
 	background-image: url('../img/home.png');
 	background-position: center 0;
@@ -97,4 +97,14 @@
 	opacity: 0.6;
 	z-index: 999999;
 	pointer-events: none;
+}
+#pixelperfect.pixelperfect--disable {
+	opacity: 0;
+}
+#pixelperfect__on{
+	position: fixed;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	z-index: 9;
 }

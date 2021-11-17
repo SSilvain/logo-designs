@@ -73,6 +73,18 @@ window.onload = function () {
 
 		this.oldScroll = newScroll;
 	});
+	
+	
+	
+	
+	// pixelperfect
+	const pixelperfect = document.getElementById("pixelperfect");
+	const pixelperfectOn = document.getElementById("pixelperfect__on");
+	
+	pixelperfectOn.addEventListener("click", ()=>{
+		pixelperfect.classList.toggle("pixelperfect--disable")
+		
+	})
 
 };
 
