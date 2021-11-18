@@ -20,43 +20,51 @@
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
 @import "null";
+
 body {
 	line-height: 22px;
 	letter-spacing: 0px;
 	color: $textColorBase;
 	background-color: $colorAlternate;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
+
 	&._lock {
-	  overflow: hidden;
+		overflow: hidden;
 	}
-  }
-  .wrapper {
+}
+
+.wrapper {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-  }
-  .page {
+}
+
+.page {
 	flex: 1 1 auto;
-  }
-  ._container {
+}
+
+._container {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
-	@media (max-width: ($md1+px)) {
-	  max-width: 970px;
-	}
-  
-	@media (max-width: ($md2+px)) {
-	  max-width: 750px;
-	}
-  
-	@media (max-width: ($md3+px)) {
-	  max-width: none;
-	  padding: 0 22px;
-	}
-  }
 
+	@media (max-width: ($md1+px)) {
+		max-width: 970px;
+	}
+
+	@media (max-width: ($md2+px)) {
+		max-width: 750px;
+	}
+
+	@media (max-width: ($md3+px)) {
+		max-width: none;
+		padding: 0 22px;
+	}
+}
+._container--small {
+	max-width: 1414px;
+}
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
@@ -68,9 +76,11 @@ body {
 //@import "datepicker";
 //@import "lightgallery";
 //@import "pagging";
-@import "basic-elements";
+@import "components";
 @import "popup";
-@import "_1_header.scss";
+@import "1_header";
+@import "2_top-block";
+@import "3_bonus";
 
 .pixelperfect {
 	background: #000;
@@ -80,8 +90,6 @@ body {
 	position: absolute;
 	top: 0;
 	opacity: 1;
-} 
+}
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-
-

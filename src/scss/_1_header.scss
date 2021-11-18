@@ -1,3 +1,6 @@
+.header{
+	margin-bottom: 200px;
+}
 .header__container {
 	max-width: 1400px;
 }
@@ -5,6 +8,7 @@
 .header__body {
 	display: flex;
 	padding-top: 60px;
+	position: relative;
 }
 
 .header__logo {
@@ -30,7 +34,7 @@
 		overflow: auto;
 		top: 0;
 		left: -100%;
-		background-color: #ddd;
+		background-color: $colorBase;
 		transition: left 0.3s ease 0s;
 		padding: 90px 15px 30px 15px;
 		transform: translateY(0%);
@@ -67,6 +71,9 @@
 	font-weight: 800;
 	letter-spacing: 0.025em;
 	text-transform: uppercase;
+	@media (max-width: ($md3+px)) {
+		display: block;
+	}
 }
 
 .out {
@@ -119,6 +126,9 @@
 					}
 				}
 			}
+			@media (max-width: ($md3+px)) {
+				color: $colorAlternate;
+			}
 		}
 	}
 
@@ -146,6 +156,31 @@
 		}
 	}
 
+	@media (min-width: ($md3+px)) {
+
+		&._hover {
+			.menu__sub-list {
+				transform: translate(0px, 0px);
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+
+			.menu__arrow {
+				transform: rotate(-180deg);
+			}
+
+			.menu__arrow,
+			.menu__link {
+				color: $colorBase;
+			}
+
+			.menu__arrow_ico {
+				fill: $colorBase;
+			}
+		}
+	}
+
 	@media (max-width: ($md3+px)) {
 		&:not(:last-child) {
 			margin: 0px 0px 15px 0px;
@@ -159,11 +194,11 @@
 
 .menu__link {
 	transition: color 0.3s ease 0s;
-	color: #444444;
+	color: $textColorBase;
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: #6861ea;
+			color: $colorBase;
 
 		}
 	}
@@ -171,6 +206,11 @@
 	@media (max-width: ($md3+px)) {
 		font-size: 24px;
 		font-weight: 600;
+		color: $colorAlternate;
+	}
+
+	@media (max-width: ($md5+px)) {
+		font-size: 18px;
 	}
 }
 
@@ -185,19 +225,23 @@
 	height: 15px;
 
 	@media (max-width: ($md3+px)) {
-		width: 40px;
-		height: 40px;
+		width: 30px;
+		height: 30px;
+		margin-right: 17px;
 
 		&._active {
 			transform: rotate(-90deg);
 		}
 	}
+}
 
-	.menu__arrow_ico {
-		fill: #000;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
+.menu__arrow_ico {
+	fill: $textColorCaption;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	@media (max-width: ($md3+px)) {
+		fill: $colorAlternate;
 	}
 }
 
@@ -208,8 +252,10 @@
 	box-shadow: inset 0 0 0 200px rgb(255 255 255 / 7%);
 	padding: 20px 30px;
 	border-radius: 12px;
-	border: 3px solid rgba(235, 235, 235, 0.9);
 	text-transform: none;
+	font-size: 16px;
+	border-radius: 0 0 15px 15px;
+	background: $colorBase;
 
 
 	@media (min-width: ($md3+px)) {
@@ -227,8 +273,9 @@
 
 	@media (max-width: ($md3+px)) {
 		border: 0;
-		margin: 10px -15px 0px -15px;
+		margin: 10px -30px 0px -15px;
 		padding-left: 60px;
+		border-radius: 0;
 	}
 }
 
@@ -243,7 +290,7 @@
 }
 
 .menu__sub-link {
-	color: #000;
+	color: $colorAlternate;
 	line-height: 120%;
 
 	@media (any-hover: hover) {
@@ -260,30 +307,19 @@
 //==================================================================================================
 
 //Burger
-.icon-menu__box {
-	display: none;
-
-	@media (max-width: ($md3+px)) {
-		background: #dee6ef;
-		height: 50px;
-		width: 50px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 7px;
-		z-index: 5;
-	}
-}
 
 .icon-menu {
 	display: none;
-
+	
 	@media (max-width: ($md3+px)) {
+		right: 20px;
+		top: 40px;
 		display: block;
 		position: absolute;
 		width: 30px;
 		height: 18px;
 		cursor: pointer;
+		z-index: 1;
 
 		span {
 			transition: all 0.3s ease 0s;
@@ -292,7 +328,7 @@
 			position: absolute;
 			width: 100%;
 			height: 2px;
-			background-color: #4614e8;
+			background-color: $colorBase;
 
 			&:first-child {
 				top: 0px;
@@ -307,7 +343,7 @@
 		&._active {
 			span {
 				transform: scale(0);
-				background-color: #4614e8;
+				background-color: $colorAlternate;
 
 				&:first-child {
 					transform: rotate(-45deg);
